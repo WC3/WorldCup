@@ -3,13 +3,25 @@
 	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
 	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
 <struts>
+	<!-- 指定全局国际化资源文件 -->
 	<constant name="struts.custom.i18n.resources" value="resource" />
+	<!-- 指定国际化编码所使用的字符集 -->
 	<constant name="struts.i18n.encoding" value="UTF-8" />
 	<constant name="struts.devMode" value="true" />
 	<package name="worldcup" extends="struts-default">
+
+		<!-- 定义全局Result映射 -->
 		<global-results>
 			<result name="error">/WEB-INF/content/error.jsp</result>
 		</global-results>
+
+		<!-- 定义全局异常映射 -->
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception"
+				result="error" />
+		</global-exception-mappings>
+
+		<!-- 定义Action -->
 		<action name="registPro" class="cn.edu.shu.worldcup.action.RegistAction">
 			<result name="error">/WEB-INF/content/regist.jsp</result>
 			<result name="input">/WEB-INF/content/regist.jsp</result>
@@ -29,12 +41,30 @@
 		<action name="teamAllPro" class="cn.edu.shu.worldcup.action.TeamAllAction">
 			<result name="success">/WEB-INF/content/team.jsp</result>
 		</action>
+		<action name="scheduleAllPro" class="cn.edu.shu.worldcup.action.ScheduleAllAction">
+			<result name="success">/WEB-INF/content/schedule.jsp</result>
+		</action>
+		<action name="schedulePro" class="cn.edu.shu.worldcup.action.ScheduleAction">
+			<result name="error">/WEB-INF/content/schedule.jsp</result>
+			<result name="success">/WEB-INF/content/schedule.jsp</result>
+		</action>	
 		<action name="playerPro" class="cn.edu.shu.worldcup.action.PlayerAction">
 			<result name="error">/WEB-INF/content/player.jsp</result>
 			<result name="success">/WEB-INF/content/player.jsp</result>
 		</action>
 		<action name="playerAllPro" class="cn.edu.shu.worldcup.action.PlayerAllAction">
 			<result name="success">/WEB-INF/content/player.jsp</result>
+		</action>
+		<action name="newsPro" class="cn.edu.shu.worldcup.action.NewsAction">
+			<result name="error">/WEB-INF/content/news.jsp</result>
+			<result name="success">/WEB-INF/content/news.jsp</result>
+		</action>
+		<action name="newsIdPro" class="cn.edu.shu.worldcup.action.NewsIdAction">
+			<result name="error">/WEB-INF/content/newsContent.jsp</result>
+			<result name="success">/WEB-INF/content/newsContent.jsp</result>
+		</action>		
+		<action name="newsAllPro" class="cn.edu.shu.worldcup.action.NewsAllAction">
+			<result name="success">/WEB-INF/content/news.jsp</result>
 		</action>
 		<action name="rankPro" class="cn.edu.shu.worldcup.action.RankAction">
 			<result name="success">/WEB-INF/content/rank.jsp</result>
@@ -47,11 +77,46 @@
 			<result name="error">/WEB-INF/content/manage.jsp</result>
 			<result name="success">/WEB-INF/content/player.jsp</result>
 		</action>
-		<action name="">
-			<result>/WEB-INF/content/index.jsp</result>
+		<action name="commentsPro" class="cn.edu.shu.worldcup.action.CommentsAction">
+			<result name="error">/WEB-INF/content/login.jsp</result>
+			<result name="success">/WEB-INF/content/news.jsp</result>
+		</action>		
+		
+		<action name="adminAddPlayerPro" class="cn.edu.shu.worldcup.action.ManagePlayerProAction">
+			<result name="error">/WEB-INF/content/error.jsp</result>
+			<result name="success">/WEB-INF/content/adminforwardplayer.jsp</result>
 		</action>
+		<action name="adminAddTeamPro" class="cn.edu.shu.worldcup.action.ManageTeamProAction">
+			<result name="error">/WEB-INF/content/error.jsp</result>
+			<result name="success">/WEB-INF/content/adminforwardteam.jsp</result>
+		</action>
+		
+		<action name="adminplayerAllPro" class="cn.edu.shu.worldcup.action.PlayerAllAction">
+			<result name="success">/WEB-INF/content/adminplayer.jsp</result>
+		</action>
+		<action name="adminteamAllPro" class="cn.edu.shu.worldcup.action.TeamAllAction">
+			<result name="success">/WEB-INF/content/adminteam.jsp</result>
+		</action>
+		<action name="adminAddnewsPro" class="cn.edu.shu.worldcup.action.ManageNewsProAction">
+			<result name="error">/WEB-INF/content/error.jsp</result>
+			<result name="success">/WEB-INF/content/adminforwardnews.jsp</result>
+		</action>		
+		<action name="adminnewsAllPro" class="cn.edu.shu.worldcup.action.NewsAllAction">
+			<result name="error">/WEB-INF/content/error.jsp</result>
+			<result name="success">/WEB-INF/content/adminnews.jsp</result>
+		</action>		
+		<action name="demo" class="cn.edu.shu.worldcup.action.DemoAction" method="goupdate">
+			<result name="success">/WEB-INF/content/adminwelcome.jsp</result>
+			<result name="error">/WEB-INF/content/adminkey.jsp</result>
+		</action>	
+		<action name="admindeleteuser" class="cn.edu.shu.worldcup.action.DemoAction" method="godelete">
+			<result name="success">/WEB-INF/content/adminuser.jsp</result>
+			<result name="error">/WEB-INF/content/adminerror.jsp</result>
+		</action>	
+		
 		<action name="*">
 			<result>/WEB-INF/content/{1}.jsp</result>
 		</action>
+
 	</package>
 </struts>

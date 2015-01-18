@@ -36,6 +36,9 @@ public class LoginAction implements Action {
 		} else {
 			ActionContext.getContext().getSession()
 					.put("username", user.getName());
+			ActionContext.getContext().getSession()
+					.put("useremail", user.getEmail());
+
 			return SUCCESS;
 		}
 	}

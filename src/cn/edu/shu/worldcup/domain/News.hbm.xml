@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.edu.shu.worldcup.domain">
+	<class name="News" table="news_table">
+		<id name="id" column="news_id" type="integer">
+			<generator class="identity" />
+		</id>
+		<property name="title" column="news_title" type="string"
+			not-null="true" unique="true" />
+		<property name="name" column="news_name" type="string"
+			not-null="true" />
+		<property name="time" column="news_time" type="date"
+			not-null="true" />
+		<property name="content" column="news_content" type="string"
+			not-null="true" />
+		<property name="images" column="news_images" type="string"
+			not-null="false" />
+	</class>
+</hibernate-mapping>

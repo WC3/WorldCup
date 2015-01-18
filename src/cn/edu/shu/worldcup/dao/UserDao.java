@@ -80,4 +80,5 @@ public interface UserDao {
 	 */
 	public List<User> findAllUser();
 
+
 }

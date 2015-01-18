@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.edu.shu.worldcup.domain">
+	<class name="Schedule" table="schedule_table">
+		<id name="id" column="schedule_id" type="integer">
+			<generator class="identity" />
+		</id>
+		<property name="sessions" column="schedule_sessions" type="string"
+			not-null="true" unique="true" />
+		<property name="time" column="schedule_time" type="string"
+			not-null="true" />
+		<property name="venue" column="schedule_venue" type="string"
+			not-null="true" />
+		<property name="result" column="schedule_result" type="string"
+			not-null="true" />
+		<property name="live" column="schedule_live" type="string"
+			not-null="true" />
+		<property name="group" column="schedule_group" type="string"
+			not-null="false" />
+	</class>
+</hibernate-mapping>

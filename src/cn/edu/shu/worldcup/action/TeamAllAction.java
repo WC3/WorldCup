@@ -34,5 +34,4 @@ public class TeamAllAction implements Action {
 		setIt(teamService.searchAllTeam());
 		return SUCCESS;
 	}
-
 }
