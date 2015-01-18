@@ -1,0 +1,6 @@
+cn.edu.shu.worldcup.action
+cn.edu.shu.worldcup.dao
+cn.edu.shu.worldcup.dao.impl
+cn.edu.shu.worldcup.domain
+cn.edu.shu.worldcup.service
+cn.edu.shu.worldcup.service.impl
