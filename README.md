@@ -10,7 +10,7 @@ Yes. [WorldCup](https://github.com/WC3/WorldCup/) is [GNU GPL v2.0](https://gith
 ## How can I contribute to WorldCup?
 You can contribute by Pull Request that adds something awesome to [WorldCup](https://github.com/WC3/WorldCup/)!
 
-## Install
+## How to install?
 1. Edit something you need in [WEB-INF/applicationContext.xml](https://github.com/WC3/WorldCup/blob/master/WebContent/WEB-INF/applicationContext.xml).
 2. Add the database driver to [WEB-INF/lib](https://github.com/WC3/WorldCup/tree/master/WebContent/WEB-INF/lib).
 3. Publish the [WorldCup](https://github.com/WC3/WorldCup/) in your [Tomcat](http://tomcat.apache.org/).
