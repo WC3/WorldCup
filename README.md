@@ -1,11 +1,17 @@
 # WorldCup
 基于Web的世界杯信息管理系统
 
-### 安装说明：
-1、安装任意数据库  
-2、安装JRE 1.7 及以上版本  
-3、安装Tomcat 7.0 及以上版本  
-4、根据实际数据库修改WEB-INF/applicationContext.xml中数据库相关配置  
-5、添加数据库驱动至WEB-INF/lib  
-6、部署项目至Tomcat  
-7、运行  
+## What platforms does [WorldCup](https://github.com/WC3/WorldCup/) run on?
+[WorldCup](https://github.com/WC3/WorldCup/) are available for [JRE](http://www.java.com/en/download/manual.jsp) 1.7 or later, [Tomcat](http://tomcat.apache.org/) 7.0 or later, and any database.
+
+## Is [WorldCup](https://github.com/WC3/WorldCup/) open source?
+Yes. [WorldCup](https://github.com/WC3/WorldCup/) is [GNU GPL v2.0](https://github.com/WC3/WorldCup/blob/master/LICENSE) licensed and the source is freely available from the [WorldCup](https://github.com/WC3/WorldCup/) repository in [WC3](https://github.com/WC3/) on [GitHub](https://github.com/).
+
+## How can I contribute to [WorldCup](https://github.com/WC3/WorldCup/)?
+You can contribute by Pull Request that adds something awesome to [WorldCup](https://github.com/WC3/WorldCup/)!
+
+## Install
+1. Edit something you need in [WEB-INF/applicationContext.xml](https://github.com/WC3/WorldCup/blob/master/WebContent/WEB-INF/applicationContext.xml).
+2. Add the database driver to [WEB-INF/lib](https://github.com/WC3/WorldCup/tree/master/WebContent/WEB-INF/lib).
+3. Publish the [WorldCup](https://github.com/WC3/WorldCup/) in your [Tomcat](http://tomcat.apache.org/).
+4. Run.
